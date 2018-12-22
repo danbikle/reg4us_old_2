@@ -14,9 +14,10 @@ mkdir -p ~/reg4us/public/csv/
 
 # I should get prices:
 curl 'https://tkrprice.herokuapp.com/static/gspc.csv' > ~/reg4us/public/csv/gspc2.csv
-exit
+
 # I should compute features from the prices:
 ~/anaconda3/bin/python genf.py SLOPES='[2,3,4,5,6,7,8,9]'
+exit
 rm -f /tmp/learn_tst_rpt.py.txt
 rm -f ../public/csv/backtest_*csv
 rm -f ../public/backtest_$yr.png
