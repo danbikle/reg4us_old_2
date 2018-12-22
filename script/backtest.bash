@@ -8,13 +8,13 @@
 
 # I should cd to the right place:
 cd ~/reg4us/script/
-exit
+
 # I should create a folder to hold CSV data:
 mkdir -p ~/reg4us/public/csv/
 
 # I should get prices:
-curl 'http://tkrprice.herokuapp.com/static/gspc.csv' > ~/reg4us/public/csv/gspc2.csv
-
+curl 'https://tkrprice.herokuapp.com/static/gspc.csv' > ~/reg4us/public/csv/gspc2.csv
+exit
 # I should compute features from the prices:
 ~/anaconda3/bin/python genf.py SLOPES='[2,3,4,5,6,7,8,9]'
 rm -f /tmp/learn_tst_rpt.py.txt
