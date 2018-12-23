@@ -40,20 +40,22 @@ test_end_s    = str(test_end_i)
 feat_df  = pd.read_csv('../public/csv/feat.csv')
 train_sr = (feat_df.cdate > train_start_s) & (feat_df.cdate < train_end_s)
 test_sr  = (feat_df.cdate > test_start_s)  & (feat_df.cdate < test_end_s)
-train_df = feat_df.loc[train_sr]
-test_df  = feat_df.loc[test_sr]
+feat_l   = ['slope2', 'slope3', 'slope4', 'slope5', 'slope6', 'slope7', 'slope8', 'slope9', 'dow', 'moy']
+train_df = feat_df[feat_l].loc[train_sr]
+test_df  = feat_df[feat_l].loc[test_sr]
 
-# I should build a Linear Regression model from slope columns in train_df:
-x_train_a = np.array(train_df)[:,3:]
-y_train_a = np.array(train_df.pctlead)
+# I should build a Linear Regression model from feature columns in train_df:
+x_train_a = np.array(train_df)
+y_train_a = np.array(feat_df.pctlead.loc[train_sr])
 from sklearn import linear_model
 linr_model = linear_model.LinearRegression()
 # I should learn:
 linr_model.fit(x_train_a, y_train_a)
 # Now that I have learned, I should predict:
-x_test_a       = np.array(test_df)[:,3:]
+x_test_a       = np.array(test_df)
 predictions_a  = linr_model.predict(x_test_a)
-predictions_df = test_df.copy()
+# predictions_df = test_df.copy()
+predictions_df = feat_df[['cdate', 'cp', 'pctlead']].loc[test_sr]
 predictions_df['pred_linr'] = predictions_a.reshape(predictions_a.shape[0],1)
 
 # I should build a Logistic Regression model.
