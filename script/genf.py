@@ -1,15 +1,16 @@
-# genf.py
+"""
+genf.py
+This script should generate a CSV file full of feature data
+from GSPC prices from Yahoo.
 
-# Demo:
-# ~/anaconda3/bin/python genf.py SLOPES='[3,4,5,6,7,8,9]'
+SLOPES should specify moving-avg durations, in days, which I compute slopes from.
+I should have at least two SLOPE values and they should be between 2 and 32.
 
-# This script should generate a CSV file full of feature data
-# from GSPC prices from Yahoo.
+If you have questions, e-me: bikle101@gmail.com
 
-# SLOPES should specify moving-avg durations, in days, which I compute slopes from.
-# I should have at least two SLOPE values and they should be between 2 and 32.
-
-# If you have questions, e-me: bikle101@gmail.com
+Demo:
+~/anaconda3/bin/python genf.py SLOPES='[3,4,5,6,7,8,9]'
+"""
 
 import numpy  as np
 import pandas as pd
@@ -46,9 +47,9 @@ gspc_df['pctlead'] = (100.0 * (gspc_df.cp.shift(-1) - gspc_df.cp) / gspc_df.cp).
 # I should compute mvgavg-slope for each slope_i
 
 # ref:
-# http://www.ml4.us/cclasses/class03pd41
-# http://pandas.pydata.org/pandas-docs/stable/computation.html#rolling-windows
-# http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rolling.html#pandas.DataFrame.rolling
+# https://ml4.herokuapp.com/cclasses/class03pd41
+# https://pandas.pydata.org/pandas-docs/stable/computation.html#rolling-windows
+# https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.rolling.html#pandas.DataFrame.rolling
 
 for slope_i in slopes_a:
   rollx          = gspc_df.rolling(window=slope_i)
