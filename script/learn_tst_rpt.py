@@ -59,7 +59,7 @@ predictions_df = feat_df[['cdate', 'cp', 'pctlead']].loc[test_sr]
 predictions_df['pred_linr'] = predictions_a.reshape(predictions_a.shape[0],1)
 
 # I should build a Logistic Regression model.
-logr_model    = linear_model.LogisticRegression()
+logr_model = linear_model.LogisticRegression()
 # I should get classification from y_train_a:
 # Should I prefer median over mean?:
 # class_train_a = (y_train_a > np.median(y_train_a))
@@ -79,14 +79,14 @@ print('Long-Only-Effectiveness:')
 print(eff_lo_f)
 
 # I should report Linear-Regression-Effectiveness:
-eff_sr     = predictions_df.pctlead * np.sign(predictions_df.pred_linr)
+eff_sr = predictions_df.pctlead * np.sign(predictions_df.pred_linr)
 predictions_df['eff_linr'] = eff_sr
 eff_linr_f                 = np.sum(eff_sr)
 print('Linear-Regression-Effectiveness:')
 print(eff_linr_f)
 
 # I should report Logistic-Regression-Effectiveness:
-eff_sr     = predictions_df.pctlead * np.sign(predictions_df.pred_logr - 0.5)
+eff_sr = predictions_df.pctlead * np.sign(predictions_df.pred_logr - 0.5)
 predictions_df['eff_logr'] = eff_sr
 eff_logr_f                 = np.sum(eff_sr)
 print('Logistic-Regression-Effectiveness:')
@@ -103,10 +103,10 @@ rpt_df.to_html(        '../app/views/pages/_agg_effectiveness.erb',      index=F
 predictions_df.to_html('../app/views/pages/_detailed_effectiveness.erb', index=False)
 
 # I should plot Pct Lead Observations vs Linear Regression Predictions
-linr1_df = predictions_df[['pred_linr','pctlead']][:-1]
+linr1_df = predictions_df[['pred_linr','pctlead']].iloc[:-1]
 
 # I should plot Pct Lead Observations vs Logistic Regression Predictions
-logr1_df = predictions_df[['pred_logr','pctlead']][:-1]
+logr1_df = predictions_df[['pred_logr','pctlead']].iloc[:-1]
 
 import matplotlib
 matplotlib.use('Agg')
@@ -132,7 +132,7 @@ plt.scatter(predictions_df.pred_linr, predictions_df.pred_logr)
 plt.savefig('../public/linlog.png')
 plt.close()
 
-rgb0_df          = predictions_df[:-1][['cdate','cp']]
+rgb0_df          = predictions_df.iloc[:-1][['cdate','cp']]
 rgb0_df['cdate'] = pd.to_datetime(rgb0_df['cdate'], format='%Y-%m-%d')
 rgb0_df.columns  = ['cdate','Long Only']
 # I should create effectiveness-line for Linear Regression predictions.
