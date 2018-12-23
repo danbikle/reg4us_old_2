@@ -40,8 +40,8 @@ test_end_s    = str(test_end_i)
 feat_df  = pd.read_csv('../public/csv/feat.csv')
 train_sr = (feat_df.cdate > train_start_s) & (feat_df.cdate < train_end_s)
 test_sr  = (feat_df.cdate > test_start_s)  & (feat_df.cdate < test_end_s)
-train_df = feat_df[train_sr]
-test_df  = feat_df[test_sr]
+train_df = feat_df.loc[train_sr]
+test_df  = feat_df.loc[test_sr]
 
 # I should build a Linear Regression model from slope columns in train_df:
 x_train_a = np.array(train_df)[:,3:]
@@ -54,7 +54,7 @@ linr_model.fit(x_train_a, y_train_a)
 x_test_a       = np.array(test_df)[:,3:]
 predictions_a  = linr_model.predict(x_test_a)
 predictions_df = test_df.copy()
-predictions_df['pred_linr'] = predictions_a.reshape(len(predictions_a),1)
+predictions_df['pred_linr'] = predictions_a.reshape(predictions_a.shape[0],1)
 
 # I should build a Logistic Regression model.
 logr_model    = linear_model.LogisticRegression()
@@ -65,8 +65,8 @@ class_train_a = (y_train_a > np.mean(y_train_a))
 # I should learn:
 logr_model.fit(x_train_a, class_train_a)
 # Now that I have learned, I should predict:
-predictions_a               = logr_model.predict_proba(x_test_a)[:,1]
-predictions_df['pred_logr'] = predictions_a.reshape(len(predictions_a),1)
+predictions_a               = logr_model.predict_proba(x_test_a)
+predictions_df['pred_logr'] = predictions_a[:,1]
 
 # I should create a CSV to report from:
 predictions_df.to_csv('../public/csv/reg4.csv', float_format='%4.6f', index=False)
