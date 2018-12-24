@@ -31,12 +31,15 @@ do
     mv ../public/rgb.png ../public/backtest_$yr.png
     ~/anaconda3/bin/python backtest_rpt.py ../public/csv/backtest_${yr}.csv > /tmp/backtest_rpt_${yr}.py.txt 2>&1
 done
-exit
+
+# I should aggregate backtest results and then report:
 cat ../public/csv/backtest_*.csv | sed -n 1p           > /tmp/backtest_all.csv
 cat ../public/csv/backtest_*.csv | sort|grep -v cdate >> /tmp/backtest_all.csv
 cp /tmp/backtest_all.csv ../public/csv/
 ~/anaconda3/bin/python backtest_rpt.py ../public/csv/backtest_all.csv
 ~/anaconda3/bin/python backtest_rgb.py ../public/csv/backtest_all.csv
+
+exit
 
 # backtest.bash clobbers data created by night.bash
 # I should fix that:
