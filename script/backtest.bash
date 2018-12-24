@@ -28,7 +28,7 @@ for (( yr=2000; yr<=${thisyr}; yr++ ))
 do
     echo Busy...
     echo backtesting: $yr                                             >> /tmp/learn_tst_rpt.py.txt
-    ~/anaconda3/bin/python learn_tst_rpt.py TRAINSIZE=25 TESTYEAR=$yr #>> /tmp/learn_tst_rpt.py.txt 2>&1
+    ~/anaconda3/bin/python learn_tst_rpt.py TRAINSIZE=25 TESTYEAR=$yr >> /tmp/learn_tst_rpt.py.txt 2>&1
     mv ../public/csv/reg4.csv ../public/csv/backtest_$yr.csv
     mv ../public/rgb.png ../public/backtest_$yr.png
     ~/anaconda3/bin/python backtest_rpt.py ../public/csv/backtest_${yr}.csv > /tmp/backtest_rpt_${yr}.py.txt 2>&1
