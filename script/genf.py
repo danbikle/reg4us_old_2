@@ -9,7 +9,8 @@ I should have at least two SLOPE values and they should be between 2 and 32.
 If you have questions, e-me: bikle101@gmail.com
 
 Demo:
-~/anaconda3/bin/python genf.py SLOPES='[3,4,5,6,7,8,9]'
+./curlprices.bash
+python genf.py SLOPES='[3,4,5,6,7,8,9]'
 """
 
 import numpy  as np
@@ -39,7 +40,6 @@ for slope_s in slopes_s.split(','):
     slopes_a.append(slope_i)
 
 gspc_df = pd.read_csv('../public/csv/gspc2.csv')
-gspc_df.columns = ['cdate','openp','highp','lowp','cp','adjp','volume']
 
 # I should compute pctlead:
 gspc_df['pctlead'] = (100.0 * (gspc_df.cp.shift(-1) - gspc_df.cp) / gspc_df.cp).fillna(0)
