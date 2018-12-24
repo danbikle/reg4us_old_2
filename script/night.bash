@@ -13,17 +13,16 @@
 
 # If you have questions, e-me: bikle101@gmail.com
 
+# I should create a folder to hold CSV data:
+mkdir -p ~/reg4us/public/csv/
+
 # I should cd to the right place:
 cd ~/reg4us/script/
-exit
 
 # I should study curlprices.bash...
 
 # I should run whatif.bash before night.bash
 ./whatif.bash
-
-# I should create a folder to hold CSV data:
-mkdir -p ~/reg4us/public/csv/
 
 # I should get prices:
 ./curlprices.bash
@@ -32,6 +31,6 @@ mkdir -p ~/reg4us/public/csv/
 ~/anaconda3/bin/python genf.py SLOPES='[2,3,4,5,6,7,8,9]'
 
 # I should learn, test, and report:
-~/anaconda3/bin/python learn_tst_rpt.py TRAINSIZE=25 TESTYEAR=2018
+~/anaconda3/bin/python learn_tst_rpt.py TRAINSIZE=25 TESTYEAR=`date +"%Y"`
 
 exit
