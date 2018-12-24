@@ -74,7 +74,7 @@ predictions_df['pred_logr'] = predictions_a[:,1]
 predictions_df.to_csv('../public/csv/reg4.csv', float_format='%4.6f', index=False)
 
 # I should report long-only-effectiveness:
-eff_lo_f = np.sum(predictions_df.pctlead)
+eff_lo_f = predictions_df.pctlead.sum()
 print('Long-Only-Effectiveness:')
 print(eff_lo_f)
 
@@ -88,7 +88,7 @@ print(eff_linr_f)
 # I should report Logistic-Regression-Effectiveness:
 eff_sr = predictions_df.pctlead * np.sign(predictions_df.pred_logr - 0.5)
 predictions_df['eff_logr'] = eff_sr
-eff_logr_f                 = np.sum(eff_sr)
+eff_logr_f                 = eff_sr.sum()
 print('Logistic-Regression-Effectiveness:')
 print(eff_logr_f)
 
