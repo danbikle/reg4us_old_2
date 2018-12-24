@@ -14,7 +14,7 @@ mkdir -p ~/reg4us/public/csv/
 
 # I should get prices:
 # curl 'https://tkrprice.herokuapp.com/static/gspc.csv' > ~/reg4us/public/csv/gspc2.csv
-
+# Better way:
 ./curlprices.bash
 
 # I should compute features from the prices:
