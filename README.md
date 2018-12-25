@@ -10,6 +10,7 @@ I should write some manual tests.
 
 I should write some rspec tests.
 
+I should study warnings sent from heroku during deployment.
 
 
 
