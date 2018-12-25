@@ -84,6 +84,11 @@ git push heroku master
 
 # Operation [ Manual ]
 
+* Manual operation can be summarized:
+* Run scripts on the laptop which then change files in the repo.
+* Study the changed files using both editor and browser.
+* Push the changed files to Heroku for the public.
+
 More:
 
 I should finish README.md
