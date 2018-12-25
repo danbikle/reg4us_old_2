@@ -82,6 +82,8 @@ git push heroku master
 * I saw this in my browser:
 ![Image of: dan411611](public/dan411611.png)
 
+# Operation [ Manual ]
+
 More:
 
 I should finish README.md
