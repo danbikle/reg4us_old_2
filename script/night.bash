@@ -19,8 +19,6 @@ mkdir -p ~/reg4us/public/csv/
 # I should cd to the right place:
 cd ~/reg4us/script/
 
-# I should study curlprices.bash...
-
 # I should run whatif.bash before night.bash
 ./whatif.bash
 

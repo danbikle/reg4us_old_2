@@ -89,6 +89,56 @@ git push heroku master
 * Study the changed files using both editor and browser.
 * Push the changed files to Heroku for the public.
 
+# curlprices.bash
+
+* The script, curlprices.bash, gets prices from the web.
+* I rarely call curlprices.bash directly but other scripts call it frequently.
+* When I manually operate curlprices.bash, I should see output like this:
+```
+reg42@ub100:~/reg4us/script$ cd ~/reg4us/script
+reg42@ub100:~/reg4us/script$ ll
+total 64
+drwxrwxr-x  2 reg42 reg42 4096 Dec 25 13:41 ./
+drwxrwxr-x 15 reg42 reg42 4096 Dec 25 13:43 ../
+-rwxr--r--  1 reg42 reg42 1723 Dec 24 12:57 backtest.bash*
+-rw-rw-r--  1 reg42 reg42 2437 Dec 23 17:17 backtest_rgb.py
+-rw-rw-r--  1 reg42 reg42 1176 Dec 23 13:20 backtest_rpt.py
+-rw-rw-r--  1 reg42 reg42  369 Dec 24 16:03 crontab_calif.txt
+-rwxrwxr-x  1 reg42 reg42  386 Dec 24 14:09 curlprices.bash*
+-rw-rw-r--  1 reg42 reg42 2283 Dec 23 20:45 genf.py
+-rw-rw-r--  1 reg42 reg42 6139 Dec 23 20:59 learn_tst_rpt.py
+-rwxr--r--  1 reg42 reg42  891 Dec 25 13:41 night.bash*
+-rwxrwxr-x  1 reg42 reg42  345 Dec 24 15:24 night_pull_push.bash*
+-rwxr--r--  1 reg42 reg42  262 Dec 23 18:00 railss.bash*
+-rwxrwxr-x  1 reg42 reg42 1759 Dec 24 13:42 whatif.bash*
+-rw-rw-r--  1 reg42 reg42 1490 Dec 24 06:11 whatif.py
+-rw-rw-r--  1 reg42 reg42 1135 Dec 24 13:29 whatif_rpt.py
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ ./curlprices.bash 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  1158k      0  0:00:01  0:00:01 --:--:-- 1158k
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ tail ~/reg4us/public/csv/gspc2.csv
+2018-12-11,2636.780029
+2018-12-12,2651.070068
+2018-12-13,2650.540039
+2018-12-14,2599.949951
+2018-12-17,2545.939941
+2018-12-18,2546.159912
+2018-12-19,2506.959961
+2018-12-20,2467.419922
+2018-12-21,2416.620117
+2018-12-24,2351.100098
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+```
+
+
 More:
 
 I should finish README.md
