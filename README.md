@@ -1,18 +1,4 @@
-# README
-
-I should finish README.md
-
-I should write installation instructions.
-
-I should write operation instructions.
-
-I should write some manual tests.
-
-I should write some rspec tests.
-
-I should study warnings sent from heroku during deployment.
-
-I run this repo on both my laptop and on Heroku.
+# README.md
 
 I deployed this repo to my laptop with the steps listed below:
 
@@ -92,3 +78,14 @@ git push heroku master
 * I saw this in my browser:
 ![Image of: dan411611](public/dan411611.png)
 
+More:
+
+I should finish README.md
+
+I should write operation instructions.
+
+I should write some manual tests.
+
+I should write some rspec tests.
+
+I should study warnings sent from heroku during deployment.
