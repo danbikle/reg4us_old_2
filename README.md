@@ -143,6 +143,51 @@ reg42@ub100:~/reg4us/script$
 * The script, whatif.bash, helps me understand some whatif-scenarios.
 * It generates predictions for various price points.
 * The price points are "what-if" closing prices of the next trading day.
+* I ran whatif.bash after 2018-12-24 market-close and captured output:
+```
+reg42@ub100:~/reg4us/script$ ./whatif.bash 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  1173k      0  0:00:01  0:00:01 --:--:-- 1173k
+-1.0
+2018
+-0.8
+2018
+-0.6
+2018
+-0.4
+2018
+-0.2
+2018
+0.0
+2018
+0.2
+2018
+0.4
+2018
+0.6
+2018
+0.8
+2018
+1.0
+2018
+Whatif_Price,Linear Regression Prediction,Logistic Regression Prediction
+2327.589100,0.480291,0.621723
+2332.291300,0.468104,0.618799
+2336.993500,0.455918,0.615875
+2341.695700,0.443781,0.612944
+2346.397900,0.431641,0.610011
+2351.100100,0.419508,0.607071
+2355.802300,0.407450,0.604138
+2360.504500,0.395365,0.601197
+2365.206700,0.383292,0.598244
+2369.908900,0.371253,0.595298
+2374.611100,0.359214,0.592346
+reg42@ub100:~/reg4us/script$
+reg42@ub100:~/reg4us/script$
+reg42@ub100:~/reg4us/script$
+```
+
 
 More:
 
