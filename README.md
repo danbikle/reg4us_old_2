@@ -18,7 +18,7 @@ I deployed this repo to my laptop with the steps listed below:
 
 * I installed Virtualbox software which I downloaded from this URL:
 * https://www.virtualbox.org/wiki/Downloads
-* I imported an Ubuntu 16 appliance:
+* I downloaded and imported an Ubuntu 16 appliance [ub16_2018_0206.ova]: 
 * https://drive.google.com/file/d/10p1W7kqzxE69jODhUzcb-qi-osN4htO-
 * After import I logged into the ann account on the appliance with passwd: "a"
 
