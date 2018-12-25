@@ -138,6 +138,11 @@ reg42@ub100:~/reg4us/script$
 reg42@ub100:~/reg4us/script$ 
 ```
 
+# whatif.bash
+
+* The script, whatif.bash, helps me understand some whatif-scenarios.
+* It generates predictions for various price points.
+* The price points are "what-if" closing prices of the next trading day.
 
 More:
 
