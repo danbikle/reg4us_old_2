@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I should delete ~reg4us crontab
 
-Things you may want to cover:
+I should finish README.md
 
-* Ruby version
+I should copy gh repo: https://github.com/danbikle/reg4us
+to:
+https://github.com/danbikle/reg4us_old
 
-* System dependencies
+I should mv
+https://github.com/danbikle/reg4us
+to https://github.com/danbikle/reg4us_tmp
 
-* Configuration
+I should copy repo: ~reg42/reg4us to to gh repo: https://github.com/danbikle/reg4us
 
-* Database creation
+I should move heroku repo: reg4.herokuapp.com to reg4us-old.herokuapp.com
 
-* Database initialization
+I should study the domain setup of reg4.herokuapp.com
 
-* How to run the test suite
+I should move repo: ~reg4us/reg4us to ~reg4us/reg4us_old
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
