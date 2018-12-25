@@ -89,3 +89,6 @@ cd ~reg4us/reg4us
 heroku create dan411611 # needs to be unique!
 git push heroku master
 ```
+* I saw this in my browser:
+![Image of: dan411611](public/dan411611.png)
+
