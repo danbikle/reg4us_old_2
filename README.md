@@ -16,8 +16,8 @@ I run this repo on both my laptop and on Heroku.
 
 I deployed this repo to my laptop with the steps listed below:
 
-  - I installed Virtualbox software which I downloaded from this URL:
-    - https://www.virtualbox.org/wiki/Downloads
+* I installed Virtualbox software which I downloaded from this URL:
+* https://www.virtualbox.org/wiki/Downloads
     
 
 
