@@ -41,6 +41,31 @@ mv ~reg4us/anaconda3/bin/curl ~reg4us/anaconda3/bin/curl_ana
 cd ~reg4us
 cp ~ann/.gitconfig ~reg4us/
 wget ml4.herokuapp.com/.gemrc
-
+echo 'export PATH="${HOME}/.rbenv/bin:$PATH"' >> ~reg4us/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~reg4us/.bashrc
+git clone https://github.com/rbenv/rbenv.git      .rbenv
+git clone https://github.com/rbenv/ruby-build.git .rbenv/plugins/ruby-build
+bash
+rbenv install 2.5.3
+rbenv global  2.5.3
+gem install rails -v 5.2.2
 ```
-
+* I cloned the reg4us repo:
+```
+cd ~reg4us
+git clone https://github.com/danbikle/reg4us
+```
+* I called bundler:
+```
+cd ~reg4us/reg4us
+bundle
+```
+* I started the local webserver:
+```
+~reg4us/reg4us/script/railss.bash
+```
+* I loaded the home page from the webserver into my browser:
+```
+localhost:4742
+```
+![Image of: localhost:4742](public/lh4742.png)
