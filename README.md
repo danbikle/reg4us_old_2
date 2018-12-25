@@ -144,7 +144,10 @@ reg42@ub100:~/reg4us/script$
 * It generates predictions for various price points.
 * The price points are "what-if" closing prices of the next trading day.
 * I ran whatif.bash after 2018-12-24 market-close and captured output.
-* The predictions displayed below are strongly bullish:
+* The predictions displayed below are strongly bullish.
+* The first Linear Regression prediction is near 0.48 which is 10x more bullish than a typical prediction.
+* The first Logistic Regression prediction is near 0.62 which is 24% above the 0.5 decision boundry.
+* Both predictions are focused on percent delta of price rather than price itself:
 ```
 reg42@ub100:~/reg4us/script$ ./whatif.bash 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
