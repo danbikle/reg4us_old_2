@@ -62,7 +62,7 @@ localhost:4742
 
 * Next, I created an account at heroku.com:
 * https://signup.heroku.com/
-* Next, I installed the Heroku client:
+* Next, on my laptop, I installed the Heroku client:
 ```
 cd ~reg4us
 wget https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-linux-x64.tar.gz
