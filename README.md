@@ -21,9 +21,8 @@ I deployed this repo to my laptop with the steps listed below:
 * I downloaded and imported an Ubuntu 16 appliance [ub16_2018_0206.ova]: 
 * https://drive.google.com/file/d/10p1W7kqzxE69jODhUzcb-qi-osN4htO-
 * After import I logged into the ann account on the appliance with passwd: "a"
-
-
-
-
-
-
+* I used a shell command to create an account named reg4us:
+```
+sudo useradd -m -s /bin/bash -G sudo reg4us
+sudo passwd reg4us
+```
