@@ -31,6 +31,16 @@ sudo passwd reg4us
 * I used shell commands to install Anaconda Python:
 ```
 cd ~reg4us
-wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
-bash Anaconda2-4.2.0-Linux-x86_64.sh -b
+echo 'export PATH=${HOME}/anaconda3/bin:$PATH' >> ~reg4us/.bashrc
+wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+bash Anaconda3-4.2.0-Linux-x86_64.sh -b
+mv ~reg4us/anaconda3/bin/curl ~reg4us/anaconda3/bin/curl_ana
 ```
+* I used shell commands to install Rails:
+```
+cd ~reg4us
+cp ~ann/.gitconfig ~reg4us/
+wget ml4.herokuapp.com/.gemrc
+
+```
+
