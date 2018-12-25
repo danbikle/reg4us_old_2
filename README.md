@@ -192,6 +192,12 @@ reg42@ub100:~/reg4us/script$
 reg42@ub100:~/reg4us/script$
 ```
 
+* If the webserver is running locally, it should serve visualizations from whatif.bash:
+![Image of: pages/whatif](public/whatif1.png)
+
+* The public should see the visualizations at this URL:
+https://reg4.herokuapp.com/pages/whatif
+
 
 More:
 
