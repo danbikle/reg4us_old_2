@@ -26,3 +26,11 @@ I deployed this repo to my laptop with the steps listed below:
 sudo useradd -m -s /bin/bash -G sudo reg4us
 sudo passwd reg4us
 ```
+* I logged out of the ann account.
+* I logged into the reg4us account.
+* I used shell commands to install Anaconda Python:
+```
+cd ~reg4us
+wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
+bash Anaconda2-4.2.0-Linux-x86_64.sh -b
+```
