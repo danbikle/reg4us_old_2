@@ -58,6 +58,8 @@ localhost:4742
 ```
 ![Image of: localhost:4742](public/lh4742.png)
 
+# Deployment [ Heroku ]
+
 * Next, I created an account at heroku.com:
 * https://signup.heroku.com/
 * Next, I installed the Heroku client:
