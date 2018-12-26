@@ -348,6 +348,9 @@ reg42@ub100:~/reg4us/script$
 reg42@ub100:~/reg4us/script$ 
 ```
 
+* If the webserver is running locally, it should serve visualizations from backtest.bash:
+![Image of: pages/compare](public/backtest1.png)
+![Image of: pages/compare](public/backtest2.png)
 
 
 More:
