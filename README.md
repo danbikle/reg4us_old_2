@@ -264,6 +264,92 @@ reg42@ub100:~/reg4us/script$
 https://reg4.herokuapp.com/pages/compare
 * At the end of the above page I should see the most recent prediction.
 
+# backtest.bash
+
+* The script, backtest.bash, generates predictions for all days going back to year 2000.
+* I should note that backtest.bash calls night.bash.
+* I ran backtest.bash on 2018-12-26 and captured output:
+```
+reg42@ub100:~/reg4us/script$ ./backtest.bash 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  1200k      0  0:00:01  0:00:01 --:--:-- 1201k
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+Busy...
+csv_in: ../public/csv/backtest_all.csv
+Long-Only-Effectiveness: 86.15960000000004
+Linear-Regression-Effectiveness: 66.07179999999984
+Logistic-Regression-Effectiveness: 251.39570000000086
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  1106k      0  0:00:01  0:00:01 --:--:-- 1107k
+-1.0
+2018
+-0.8
+2018
+-0.6
+2018
+-0.4
+2018
+-0.2
+2018
+0.0
+2018
+0.2
+2018
+0.4
+2018
+0.6
+2018
+0.8
+2018
+1.0
+2018
+Whatif_Price,Linear Regression Prediction,Logistic Regression Prediction
+2409.551000,0.058329,0.520183
+2414.418800,0.046373,0.517156
+2419.286600,0.034401,0.514126
+2424.154300,0.022468,0.511104
+2429.022100,0.010552,0.508085
+2433.889900,-0.001388,0.505061
+2438.757700,-0.013223,0.502060
+2443.625500,-0.025088,0.499051
+2448.493200,-0.036922,0.496053
+2453.361000,-0.048746,0.493059
+2458.228800,-0.060547,0.490066
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  1197k      0  0:00:01  0:00:01 --:--:-- 1198k
+Long-Only-Effectiveness:
+-8.841400000000002
+Linear-Regression-Effectiveness:
+-15.9012
+Logistic-Regression-Effectiveness:
+-17.252999999999997
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+```
+
+
+
 More:
 
 I should finish README.md
