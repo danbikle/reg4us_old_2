@@ -352,6 +352,8 @@ reg42@ub100:~/reg4us/script$
 ![Image of: pages/compare](public/backtest1.png)
 ![Image of: pages/compare](public/backtest2.png)
 
+* The public should see the visualizations at this URL:
+https://reg4.herokuapp.com/pages/backtests
 
 More:
 
