@@ -355,6 +355,33 @@ reg42@ub100:~/reg4us/script$
 * The public should see the visualizations at this URL:
 https://reg4.herokuapp.com/pages/backtests
 
+
+# Operation [ Automatic ]
+
+* Automatic operation can be summarized:
+* I use cron to run scripts on the laptop which then change files in the repo.
+* I use cron to push the changed files to Heroku for the public.
+* What is cron?
+* Cron is program launched once a minute by Linux to run shell scripts.
+* I use a crontab file to tell cron about scripts that I want it to run.
+
+# crontab_calif.txt
+
+* I use crontab_calif.txt to declare that I want cron to run night_pull_push.bash at 19:59 Mon-Fri.
+* I use a shell command to submit crontab_calif.txt to cron:
+```
+crontab ~/reg4us/script/crontab_calif.txt
+```
+* I can run the above command only once and cron will be happy.
+* If I need to change cron behavior, I edit crontab_calif.txt and then re-run the above shell command.
+
+# night_pull_push.bash
+
+* The script, night_pull_push.bash, is intended to be run by cron.
+* To understand the script better I can run it manually:
+```
+```
+
 More:
 
 I should finish README.md
