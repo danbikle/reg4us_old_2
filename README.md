@@ -257,6 +257,13 @@ reg42@ub100:~/reg4us/script$
 reg42@ub100:~/reg4us/script$
 ```
 
+* If the webserver is running locally, it should serve visualizations from night.bash:
+![Image of: pages/compare](public/compare1.png)
+
+* The public should see the visualizations at this URL:
+https://reg4.herokuapp.com/pages/compare
+* At the end of the above page I should see the most recent prediction.
+
 More:
 
 I should finish README.md
@@ -268,3 +275,5 @@ I should write some manual tests.
 I should write some rspec tests.
 
 I should study warnings sent from heroku during deployment.
+
+I should add grid lines to the compare scatter plots.
