@@ -380,6 +380,221 @@ crontab ~/reg4us/script/crontab_calif.txt
 * The script, night_pull_push.bash, is intended to be run by cron.
 * To understand the script better I can run it manually:
 ```
+reg42@ub100:~/reg4us/script$ ll
+total 64
+drwxrwxr-x  2 reg42 reg42 4096 Dec 25 13:51 ./
+drwxrwxr-x 15 reg42 reg42 4096 Dec 26 14:18 ../
+-rwxr--r--  1 reg42 reg42 1723 Dec 24 12:57 backtest.bash*
+-rw-rw-r--  1 reg42 reg42 2437 Dec 23 17:17 backtest_rgb.py
+-rw-rw-r--  1 reg42 reg42 1176 Dec 23 13:20 backtest_rpt.py
+-rw-rw-r--  1 reg42 reg42  369 Dec 24 16:03 crontab_calif.txt
+-rwxrwxr-x  1 reg42 reg42  386 Dec 24 14:09 curlprices.bash*
+-rw-rw-r--  1 reg42 reg42 2283 Dec 23 20:45 genf.py
+-rw-rw-r--  1 reg42 reg42 6139 Dec 23 20:59 learn_tst_rpt.py
+-rwxr--r--  1 reg42 reg42  891 Dec 25 13:41 night.bash*
+-rwxrwxr-x  1 reg42 reg42  345 Dec 24 15:24 night_pull_push.bash*
+-rwxr--r--  1 reg42 reg42  262 Dec 23 18:00 railss.bash*
+-rwxrwxr-x  1 reg42 reg42 1759 Dec 24 13:42 whatif.bash*
+-rw-rw-r--  1 reg42 reg42 1490 Dec 24 06:11 whatif.py
+-rw-rw-r--  1 reg42 reg42 1135 Dec 24 13:29 whatif_rpt.py
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ ./night_pull_push.bash 
+From https://git.heroku.com/reg4
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  61290      0  0:00:21  0:00:21 --:--:--  270k
+-1.0
+2018
+-0.8
+2018
+-0.6
+2018
+-0.4
+2018
+-0.2
+2018
+0.0
+2018
+0.2
+2018
+0.4
+2018
+0.6
+2018
+0.8
+2018
+1.0
+2018
+Whatif_Price,Linear Regression Prediction,Logistic Regression Prediction
+2409.551000,0.058329,0.520183
+2414.418800,0.046373,0.517156
+2419.286600,0.034401,0.514126
+2424.154300,0.022468,0.511104
+2429.022100,0.010552,0.508085
+2433.889900,-0.001388,0.505061
+2438.757700,-0.013223,0.502060
+2443.625500,-0.025088,0.499051
+2448.493200,-0.036922,0.496053
+2453.361000,-0.048746,0.493059
+2458.228800,-0.060547,0.490066
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0   912k      0  0:00:01  0:00:01 --:--:--  912k
+Long-Only-Effectiveness:
+-8.841400000000002
+Linear-Regression-Effectiveness:
+-15.9012
+Logistic-Regression-Effectiveness:
+-17.252999999999997
+[master 3b614f9] night_pull_push.bash.done
+ 1 file changed, 27 insertions(+)
+Counting objects: 41, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (41/41), 633.25 KiB | 0 bytes/s, done.
+Total 41 (delta 21), reused 0 (delta 0)
+remote: Compressing source files... done.        
+remote: Building source:        
+remote: 
+remote: -----> Ruby app detected        
+remote: -----> Compiling Ruby/Rails        
+remote: -----> Using Ruby version: ruby-2.5.3        
+remote: -----> Installing dependencies using bundler 1.15.2        
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment        
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.17.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.        
+remote:        Fetching gem metadata from https://rubygems.org/.........        
+remote:        Fetching version metadata from https://rubygems.org/..        
+remote:        Fetching dependency metadata from https://rubygems.org/.        
+remote:        Using rake 12.3.2        
+remote:        Using concurrent-ruby 1.1.4        
+remote:        Using minitest 5.11.3        
+remote:        Using thread_safe 0.3.6        
+remote:        Using builder 3.2.3        
+remote:        Using erubi 1.8.0        
+remote:        Using mini_portile2 2.4.0        
+remote:        Using crass 1.0.4        
+remote:        Using rack 2.0.6        
+remote:        Using nio4r 2.3.1        
+remote:        Using websocket-extensions 0.1.3        
+remote:        Using mini_mime 1.0.1        
+remote:        Using arel 9.0.0        
+remote:        Using mimemagic 0.3.3        
+remote:        Using msgpack 1.2.4        
+remote:        Using bundler 1.15.2        
+remote:        Using coffee-script-source 1.12.2        
+remote:        Using execjs 2.7.0        
+remote:        Using method_source 0.9.2        
+remote:        Using thor 0.20.3        
+remote:        Using erubis 2.7.0        
+remote:        Using ffi 1.9.25        
+remote:        Using temple 0.8.0        
+remote:        Using tilt 2.0.9        
+remote:        Using sexp_processor 4.11.0        
+remote:        Using multi_json 1.13.1        
+remote:        Using pg 1.0.0        
+remote:        Using puma 3.12.0        
+remote:        Using rb-fsevent 0.10.3        
+remote:        Using turbolinks-source 5.2.0        
+remote:        Using tzinfo 1.2.5        
+remote:        Using i18n 1.3.0        
+remote:        Using nokogiri 1.9.1        
+remote:        Using rack-test 1.1.0        
+remote:        Using sprockets 3.7.2        
+remote:        Using websocket-driver 0.7.0        
+remote:        Using marcel 0.3.3        
+remote:        Using bootsnap 1.3.2        
+remote:        Using mail 2.7.1        
+remote:        Using uglifier 4.1.20        
+remote:        Using coffee-script 2.4.1        
+remote:        Using rb-inotify 0.10.0        
+remote:        Using ruby_parser 3.12.0        
+remote:        Using turbolinks 5.2.0        
+remote:        Using activesupport 5.2.2        
+remote:        Using loofah 2.2.3        
+remote:        Using haml 5.0.4        
+remote:        Using sass-listen 4.0.0        
+remote:        Using rails-dom-testing 2.0.3        
+remote:        Using globalid 0.4.1        
+remote:        Using activemodel 5.2.2        
+remote:        Using jbuilder 2.8.0        
+remote:        Using rails-html-sanitizer 1.0.4        
+remote:        Using html2haml 2.2.0        
+remote:        Using sass 3.7.2        
+remote:        Using activejob 5.2.2        
+remote:        Using actionview 5.2.2        
+remote:        Using activerecord 5.2.2        
+remote:        Using actionpack 5.2.2        
+remote:        Using actioncable 5.2.2        
+remote:        Using actionmailer 5.2.2        
+remote:        Using activestorage 5.2.2        
+remote:        Using railties 5.2.2        
+remote:        Using sprockets-rails 3.2.1        
+remote:        Using coffee-rails 4.2.2        
+remote:        Using haml-rails 1.0.0        
+remote:        Using rails 5.2.2        
+remote:        Using sass-rails 5.0.7        
+remote:        Bundle complete! 22 Gemfile dependencies, 68 gems now installed.        
+remote:        Gems in the groups development and test were not installed.        
+remote:        Bundled gems are installed into ./vendor/bundle.        
+remote:        Bundle completed (3.90s)        
+remote:        Cleaning up the bundler cache.        
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.17.2). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.        
+remote:        The latest bundler is 2.0.0.pre.2, but you are currently running 1.15.2.        
+remote:        To update, run `gem install bundler --pre`        
+remote: -----> Installing node-v8.10.0-linux-x64        
+remote: -----> Detecting rake tasks        
+remote: -----> Preparing app for Rails asset pipeline        
+remote:        Running: rake assets:precompile        
+remote:        Yarn executable was not detected in the system.        
+remote:        Download Yarn at https://yarnpkg.com/en/docs/install        
+remote:        Asset precompilation completed (1.26s)        
+remote:        Cleaning assets        
+remote:        Running: rake assets:clean        
+remote: -----> Detecting rails configuration        
+remote: 
+remote: ###### WARNING:        
+remote: 
+remote:        You set your `config.active_storage.service` to :local in production.        
+remote:        If you are uploading files to this app, they will not persist after the app        
+remote:        is restarted, on one-off dynos, or if the app has multiple dynos.        
+remote:        Heroku applications have an ephemeral file system. To        
+remote:        persist uploaded files, please use a service such as S3 and update your Rails        
+remote:        configuration.        
+remote:                
+remote:        For more information can be found in this article:        
+remote:          https://devcenter.heroku.com/articles/active-storage-on-heroku        
+remote:                
+remote: 
+remote: ###### WARNING:        
+remote: 
+remote:        We detected that some binary dependencies required to        
+remote:        use all the preview features of Active Storage are not        
+remote:        present on this system.        
+remote:                
+remote:        For more information please see:        
+remote:          https://devcenter.heroku.com/articles/active-storage-on-heroku        
+remote:                
+remote: 
+remote: 
+remote: -----> Discovering process types        
+remote:        Procfile declares types     -> web        
+remote:        Default types for buildpack -> console, rake        
+remote: 
+remote: -----> Compressing...        
+remote:        Done: 52.7M        
+remote: -----> Launching...        
+remote:        Released v17        
+remote:        https://reg4.herokuapp.com/ deployed to Heroku        
+remote: 
+remote: Verifying deploy... done.        
+To https://git.heroku.com/reg4.git
+   8f49571..3b614f9  master -> master
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
 ```
 
 More:
