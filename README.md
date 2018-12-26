@@ -48,7 +48,7 @@ git clone https://github.com/danbikle/reg4us
 cd ~reg4us/reg4us
 bundle
 ```
-* I started the local webserver:
+* I started the local webserver with a simple shell script:
 ```
 ~reg4us/reg4us/script/railss.bash
 ```
@@ -198,6 +198,64 @@ reg42@ub100:~/reg4us/script$
 * The public should see the visualizations at this URL:
 https://reg4.herokuapp.com/pages/whatif
 
+
+# night.bash
+
+* The script, night.bash, generates predictions for the most recent closing price.
+* I should note that night.bash calls both curlprices.bash and whatif.bash.
+* I ran night.bash on 2018-12-25 and captured output:
+```
+reg42@ub100:~/reg4us/script$ ./night.bash 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  44619      0  0:00:29  0:00:29 --:--:--  345k
+-1.0
+2018
+-0.8
+2018
+-0.6
+2018
+-0.4
+2018
+-0.2
+2018
+0.0
+2018
+0.2
+2018
+0.4
+2018
+0.6
+2018
+0.8
+2018
+1.0
+2018
+Whatif_Price,Linear Regression Prediction,Logistic Regression Prediction
+2327.589100,0.480291,0.621723
+2332.291300,0.468104,0.618799
+2336.993500,0.455918,0.615875
+2341.695700,0.443781,0.612944
+2346.397900,0.431641,0.610011
+2351.100100,0.419508,0.607071
+2355.802300,0.407450,0.604138
+2360.504500,0.395365,0.601197
+2365.206700,0.383292,0.598244
+2369.908900,0.371253,0.595298
+2374.611100,0.359214,0.592346
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1272k  100 1272k    0     0  1152k      0  0:00:01  0:00:01 --:--:-- 1158k
+Long-Only-Effectiveness:
+-12.362700000000002
+Linear-Regression-Effectiveness:
+-19.4225
+Logistic-Regression-Effectiveness:
+-20.774299999999997
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$ 
+reg42@ub100:~/reg4us/script$
+```
 
 More:
 
