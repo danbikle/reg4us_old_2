@@ -41,7 +41,9 @@ I should install Rails 5.2.2 using the gem command.
 I should clone the reg4us repo:
 https://github.com/danbikle/reg4us
 
-I should start the reg4us webserver on my laptop.
+The reg4us repo should have a folder named script containing a variety of Bash and Python scripts.
+
+I should start the reg4us webserver on my laptop using ~/reg4us/script/railss.bash
 
 I should install heroku software from this URL:
 https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-linux-x64.tar.gz
@@ -54,6 +56,9 @@ I should deploy reg4.us to Heroku as a Rails app.
 
 reg4.us should be visible from this URL: reg4.herokuapp.com
 
+The URL, https://tkrprice.herokuapp.com/static/gspc.csv, should serve the most recent GSPC price and price history.
+
+The script ~/reg4us/script/curlprices.bash should copy prices to ~/reg4us/public/csv/gspc2.csv
 
 
 
