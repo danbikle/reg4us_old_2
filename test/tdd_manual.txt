@@ -1,0 +1,23 @@
+tdd_manual.txt
+
+This file should list a set of manual tests which should help me develop my app.
+
+My app should be called reg4.us
+
+reg4.us should predict up or down action of SP500 daily closing prices.
+
+I should be able to operate my reg4.us manually.
+
+I should be able to operate my reg4.us automatically using cron.
+
+I should develop reg4.us on Ubuntu 16.04 running in a virtualbox appliance.
+
+I should deploy reg4.us to Heroku as a Rails app.
+
+reg4.us should be visible from this URL: reg4.herokuapp.com
+
+
+
+
+
+
