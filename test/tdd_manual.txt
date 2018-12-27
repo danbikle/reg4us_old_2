@@ -64,7 +64,7 @@ The script ~/reg4us/script/whatif.bash:
   - should call curlprices.bash
   - should generate whatif predictions and copy them to ~/reg4us/public/csv/whatif.csv
   - should plot predictions vs tomorrow's price
-
+  - should plot logistic regression predictions vs linear regression predictions
 
 
 
