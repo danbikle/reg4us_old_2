@@ -60,6 +60,10 @@ The URL, https://tkrprice.herokuapp.com/static/gspc.csv, should serve the most r
 
 The script ~/reg4us/script/curlprices.bash should copy prices to ~/reg4us/public/csv/gspc2.csv
 
+The script ~/reg4us/script/whatif.bash:
+  - should call curlprices.bash
+  - should generate whatif predictions and copy them to ~/reg4us/public/csv/whatif.csv
+  - should plot predictions vs tomorrow's price
 
 
 
