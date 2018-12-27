@@ -43,6 +43,13 @@ https://github.com/danbikle/reg4us
 
 I should start the reg4us webserver on my laptop.
 
+I should install heroku software from this URL:
+https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-linux-x64.tar.gz
+
+I should create an account on heroku.com
+
+I should login to heroku.com with the heroku shell command.
+
 I should deploy reg4.us to Heroku as a Rails app.
 
 reg4.us should be visible from this URL: reg4.herokuapp.com
