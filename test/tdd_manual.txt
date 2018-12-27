@@ -12,6 +12,37 @@ I should be able to operate my reg4.us automatically using cron.
 
 I should develop reg4.us on Ubuntu 16.04 running in a virtualbox appliance.
 
+I should get my appliance from this URL:
+https://drive.google.com/file/d/10p1W7kqzxE69jODhUzcb-qi-osN4htO-
+
+The above URL should give me a file called ub16_2018_0206.ova
+
+I should import ub16_2018_0206.ova into virtualbox installed on my laptop.
+
+After I start ub16_2018_0206 I should login as ann with password: "a".
+
+I should use this shell command to create an account named reg4us:
+
+sudo useradd -m -s /bin/bash -G sudo reg4us
+
+I should use reg4us as the development account.
+
+I should install Anaconda3-4.2.0-Linux-x86_64.sh
+
+I should run shell command:
+  mv ~reg4us/anaconda3/bin/curl ~reg4us/anaconda3/bin/curl_ana
+
+I should install rbenv from github.com
+
+I should install Ruby 2.5.3 from rbenv.
+
+I should install Rails 5.2.2 using the gem command.
+
+I should clone the reg4us repo:
+https://github.com/danbikle/reg4us
+
+I should start the reg4us webserver on my laptop.
+
 I should deploy reg4.us to Heroku as a Rails app.
 
 reg4.us should be visible from this URL: reg4.herokuapp.com
