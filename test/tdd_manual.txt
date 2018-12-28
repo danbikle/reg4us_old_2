@@ -45,6 +45,8 @@ The reg4us repo should have a folder named script containing a variety of Bash a
 
 I should start the reg4us webserver on my laptop using ~/reg4us/script/railss.bash
 
+The URL for that webserver should be: http://localhost:4742
+
 I should install heroku software from this URL:
 https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-linux-x64.tar.gz
 
@@ -65,6 +67,17 @@ The script ~/reg4us/script/whatif.bash:
   - should generate whatif predictions and copy them to ~/reg4us/public/csv/whatif.csv
   - should plot predictions vs tomorrow's price
   - should plot logistic regression predictions vs linear regression predictions
+  - should generate output for these routes:
+  - http://localhost:4742/pages/whatif
+  - https://reg4.herokuapp.com/pages/whatif
 
 
 
+The script ~/reg4us/script/night.bash:
+  - should call curlprices.bash
+  - should call whatif.bash
+  - should report effectiveness for the current year
+  - should generate output for these routes:
+  - http://localhost:4742/pages/compare
+  - https://reg4.herokuapp.com/pages/compare
+  - At the end of the above pages I should see the most recent prediction.
