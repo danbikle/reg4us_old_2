@@ -81,3 +81,8 @@ The script ~/reg4us/script/night.bash:
   - http://localhost:4742/pages/compare
   - https://reg4.herokuapp.com/pages/compare
   - At the end of the above pages I should see the most recent prediction.
+
+The script ~/reg4us/script/learn_tst_rpt.py:
+  - should not hard-code values for feat_l
+  - should fill feat_l by observing structure of feat.csv
+  
