@@ -40,7 +40,11 @@ test_end_s    = str(test_end_i)
 feat_df  = pd.read_csv('../public/csv/feat.csv')
 train_sr = (feat_df.cdate > train_start_s) & (feat_df.cdate < train_end_s)
 test_sr  = (feat_df.cdate > test_start_s)  & (feat_df.cdate < test_end_s)
-feat_l   = ['slope2', 'slope3', 'slope4', 'slope5', 'slope6', 'slope7', 'slope8', 'slope9', 'dow', 'moy']
+# I should not hard-code column names.
+# feat_l   = ['slope2', 'slope3', 'slope4', 'slope5', 'slope6', 'slope7', 'slope8', 'slope9', 'dow', 'moy']
+# I should read column names from feat.csv
+# I should assume the features start at 3rd column.
+feat_l   = feat_df.columns.tolist()[3:]
 train_df = feat_df[feat_l].loc[train_sr]
 test_df  = feat_df[feat_l].loc[test_sr]
 
