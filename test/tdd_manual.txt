@@ -78,12 +78,7 @@ The script ~/reg4us/script/night.bash:
   - should generate output for these routes:
   - http://localhost:4742/pages/compare
   - https://reg4.herokuapp.com/pages/compare
-  - At the end of the above pages I should see the most recent prediction.
-
-The script ~/reg4us/script/learn_tst_rpt.py:
-  - should not hard-code values for feat_l
-  - should fill feat_l by observing structure of feat.csv
-  
+  - At the end of the above pages I should see the most recent prediction.  
 
 The script ~/reg4us/script/backtest.bash:
   - should call curlprices.bash
@@ -92,3 +87,12 @@ The script ~/reg4us/script/backtest.bash:
   - should call night.bash
   - The public should see backtest visualizations at this URL:
   - https://reg4.herokuapp.com/pages/backtests
+
+The script ~/reg4us/script/genf.py:
+  - should generate feat.csv from gspc2.csv
+  - feat.csv should contain slopes of moving averages as ML features
+  - Specific ML features should be determined at run-time
+
+The script ~/reg4us/script/learn_tst_rpt.py:
+  - should not hard-code values for feat_l
+  - should fill feat_l by observing structure of feat.csv
