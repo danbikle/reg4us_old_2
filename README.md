@@ -349,8 +349,8 @@ reg42@ub100:~/reg4us/script$
 ```
 
 * If the webserver is running locally, it should serve visualizations from backtest.bash:
-![Image of: pages/compare](public/backtest1.png)
-![Image of: pages/compare](public/backtest2.png)
+![Image of: backtest1.png](public/backtest1.png)
+![Image of: backtest2.png](public/backtest2.png)
 
 * The public should see the visualizations at this URL:
 https://reg4.herokuapp.com/pages/backtests

@@ -71,8 +71,6 @@ The script ~/reg4us/script/whatif.bash:
   - http://localhost:4742/pages/whatif
   - https://reg4.herokuapp.com/pages/whatif
 
-
-
 The script ~/reg4us/script/night.bash:
   - should call curlprices.bash
   - should call whatif.bash
@@ -86,3 +84,11 @@ The script ~/reg4us/script/learn_tst_rpt.py:
   - should not hard-code values for feat_l
   - should fill feat_l by observing structure of feat.csv
   
+
+The script ~/reg4us/script/backtest.bash:
+  - should call curlprices.bash
+  - should call genf.py to compute features from the prices
+  - should generate predictions for all days going back to year 2000
+  - should call night.bash
+  - The public should see backtest visualizations at this URL:
+  - https://reg4.herokuapp.com/pages/backtests
