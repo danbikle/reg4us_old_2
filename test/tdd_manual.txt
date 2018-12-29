@@ -109,4 +109,7 @@ The script ~/reg4us/script/learn_tst_rpt.py:
   
 The file ~/reg4us/script/crontab_calif.txt:
   - should contain cron syntax to automate the calling of night.bash
-  
+
+The script ~/reg4us/script/night_pull_push.bash:
+  - should be called from cron
+  - should git pull, run night.bash, git commit, git push
