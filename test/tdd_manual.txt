@@ -113,3 +113,7 @@ The file ~/reg4us/script/crontab_calif.txt:
 The script ~/reg4us/script/night_pull_push.bash:
   - should be called from cron
   - should git pull, run night.bash, git commit, git push
+
+The script ~/reg4us/test/system/browse_links.rb:
+  - should visit a variety of links
+  
