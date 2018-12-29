@@ -97,7 +97,16 @@ The script ~/reg4us/script/genf.py:
 The script ~/reg4us/script/learn_tst_rpt.py:
   - should not hard-code values for feat_l
   - should fill feat_l by observing structure of feat.csv
-
+  - should learn from observations in ~/reg4us/public/csv/feat.csv
+  - should test its learned models on one year of data
+  - should report effectiveness of the models
+  - the two algorithms should be Linear Regression and Logistic Regression
+  - should write predictions to ~/reg4us/public/csv/reg4.csv
+  - should generate Effectiveness Visualizations for:
+    - Long Only
+    - Logistic Regression
+    - Linear   Regression
+  
 The file ~/reg4us/script/crontab_calif.txt:
   - should contain cron syntax to automate the calling of night.bash
   
